@@ -1,0 +1,22 @@
+html, body {
+   width: 100%;
+   height: 100%;
+}
+
+body {
+   margin: 0;
+}
+
+#parallax {
+   width: 3000px;
+   height: 100%;
+   overflow-x: visible;
+   position: fixed;
+}
+
+.post {
+   margin-left: 15px;
+   position: relative;
+   float: left;
+   width: 500px;
+}
