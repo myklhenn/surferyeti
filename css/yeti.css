@@ -3,6 +3,11 @@
    height: 100%;
 }*/
 
+@font-face {
+   font-family: HoboStd;
+   src: url("../fonts/HoboStd.otf");
+}
+
 body {
    overflow-x: hidden;
 }
@@ -59,4 +64,46 @@ h2 {
    float: left;
    height: 100%;
    width: 2000px;
+}
+
+#nav-container {
+   position: fixed;
+   left: 75px;
+   top: 600px;
+   z-index: 1;
+}
+
+#page-links {
+   font-family: HoboStd;
+   /*color: #b75a01;*/
+   color: #dabc5b;
+   text-shadow: 4px 4px 4px black;
+   font-size: 2.3em;
+   position: relative;
+   float: left;
+   height: inherit;
+   padding-top: 10px;
+   padding-bottom: 5px;
+   margin-left: 115px;
+}
+
+#page-links p:hover {
+   color: #b75a01;
+}
+
+#page-links p {
+   position: relative;
+   float: left;
+   margin-right: 75px;
+   vertical-align: middle;
+}
+
+#social-container {
+   
+}
+
+#logo {
+   position: relative;
+   float: left;
+   width: 400px;
 }
