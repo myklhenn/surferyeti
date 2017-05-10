@@ -7,18 +7,56 @@ body {
    overflow-x: hidden;
 }
 
+h2 {
+   color: cyan;
+   margin-left: 25px;
+   font-size: 3em;
+}
+
 #parallax {
    /*height: 100%;*/
    /*overflow-x: visible;*/
-   width: 3000px;
+   width: 5350px;
+   height: 768px;
    position: fixed;
    top: 0;
    left: 0;
 }
 
-.post {
+/*.post {
    margin-left: 15px;
    position: relative;
    float: left;
    width: 500px;
+}*/
+
+#bios-section {
+   background-image: url("../img/bios-bkg.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+   float: left;
+   height: 100%;
+   width: 1950px;
+}
+
+#shows-section {
+   background-image: url("../img/shows-bkg.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   position: relative;
+   float: left;
+   height: 100%;
+   width: 1400px;
+}
+
+#photos-section {
+   background-image: url("../img/fan-art-bkg.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+   float: left;
+   height: 100%;
+   width: 2000px;
 }
