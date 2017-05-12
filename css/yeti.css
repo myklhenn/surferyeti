@@ -12,12 +12,6 @@ body {
    overflow-x: hidden;
 }
 
-h2 {
-   color: cyan;
-   margin-left: 25px;
-   font-size: 3em;
-}
-
 #parallax {
    /*height: 100%;*/
    /*overflow-x: visible;*/
@@ -35,7 +29,7 @@ h2 {
    width: 500px;
 }*/
 
-#bios-section {
+.bios-section {
    background-image: url("../img/bios-bkg.jpg");
    background-size: cover;
    background-repeat: no-repeat;
@@ -45,7 +39,7 @@ h2 {
    width: 1950px;
 }
 
-#shows-section {
+.shows-section {
    background-image: url("../img/shows-bkg.jpg");
    background-size: cover;
    background-repeat: no-repeat;
@@ -56,7 +50,7 @@ h2 {
    width: 1400px;
 }
 
-#photos-section {
+.photos-section {
    background-image: url("../img/fan-art-bkg.jpg");
    background-size: cover;
    background-repeat: no-repeat;
@@ -69,14 +63,14 @@ h2 {
 #nav-container {
    position: fixed;
    left: 75px;
-   top: 600px;
+   bottom: 50px;
    z-index: 1;
 }
 
 #page-links {
    font-family: HoboStd;
    /*color: #b75a01;*/
-   color: #dabc5b;
+   
    text-shadow: 4px 4px 4px black;
    font-size: 2.3em;
    position: relative;
@@ -87,19 +81,54 @@ h2 {
    margin-left: 115px;
 }
 
-#page-links p:hover {
+#page-links a:hover {
    color: #b75a01;
 }
 
-#page-links p {
+#page-links a {
    position: relative;
+   color: #dabc5b;
+   text-decoration: none;
    float: left;
    margin-right: 75px;
    vertical-align: middle;
 }
 
+#shows-btn {
+
+}
+
 #social-container {
-   
+   position: fixed;
+   right: 75px;
+   bottom: 95px;
+   z-index: 1;
+}
+
+#social-container i {
+   color: #dabc5b;
+   text-shadow: 4px 4px 4px black;
+   margin-right: 25px;
+}
+
+#social-container i:hover {
+   color: #b75a01;
+}
+
+#facebook-btn i:hover {
+   color: #0184ff;
+}
+
+#bandcamp-btn i:hover {
+   color: #6199aa;
+}
+
+#soundcloud-btn i:hover {
+   color: #ff6c00;
+}
+
+#snapchat-btn i:hover {
+   color: #fffe00;
 }
 
 #logo {

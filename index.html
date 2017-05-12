@@ -4,36 +4,40 @@
 <head>
    <title>Surfer Yeti</title>
    <link rel="stylesheet" href="css/yeti.css">
+   <link rel="stylesheet" href="css/font-awesome.min.css">
    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
    <script type="text/javascript" src="js/jquery.jInvertScroll.min.js"></script>
+   <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
    <script type="text/javascript" src="js/yeti.js"></script>
 </head>
 
 <body>
-   <!--MAIN CONTENT-->
    <div id="parallax">
-      <div id="bios-section">
+      <div class="bios-section">
          
          <div id="nav-container">
             <img id="logo" src="img/surfer-yeti-logo-shadow.png" alt="surfer-yeti-logo">
             <div id="page-links">
-               <p>HOME</p>
-               <p>SHOWS</p>
-               <p>ART</p>
+               <a href="#" data-target="bios-section"><p>HOME</p></a>
+               <a href="#" data-target="shows-section"><p>SHOWS</p></a>
+               <a href="#" data-target="photos-section"><p>ART</p></a>
             </div>
          </div>
 
          <div id="social-container">
-            <!--<p>(social icons go here)</p>-->
+            <a id="facebook-btn" href=""><i class="fa fa-facebook-square fa-3x"></i></a>
+            <a id="bandcamp-btn" href=""><i class="fa fa-bandcamp fa-3x"></i></a>
+            <a id="snapchat-btn" href=""><i class="fa fa-snapchat fa-3x"></i></a>
+            <a id="soundcloud-btn" href=""><i class="fa fa-soundcloud fa-3x"></i></a>
          </div>
 
       </div>
-      <div id="shows-section">       
+      <div class="shows-section">       
 
          <img src="img/showBub.png" alt="showtimeBubble" style="width:600px; height:250px; position:relative; left: 775px; top: 75px;">
 
       </div>
-      <div id="photos-section">
+      <div class="photos-section">
 
       </div>
    </div>
