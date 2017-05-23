@@ -12,9 +12,59 @@
 </head>
 
 <body>
+   <div id="fb-root"></div>
+   <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+      fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));</script>
+
    <div id="parallax">
-      <div class="bios-section">
-         
+      <div id="bios-section">
+
+         <div id="bkg-container">
+            <img class="bio-bkg"     style="z-index: 0;" src="img/bios-bkg-02.png" alt="">
+
+            <img id="cutout-sean"    style="z-index: 1;" src="img/cutout-sean.png" class="cutout" alt="">
+            
+            
+            <img class="bio-bkg"     style="z-index: 2;" src="img/bios-bkg-01.png" alt="">
+            <img id="cutout-graydon" style="z-index: 3;" src="img/cutout-graydon.png" class="cutout" alt="">
+            <img class="bio-bkg"     style="z-index: 4;" src="img/bios-bkg-04.png" alt="">
+            <img id="cutout-alec"    style="z-index: 5;" src="img/cutout-alec.png" class="cutout" alt="">
+            <img class="bio-bkg"     style="z-index: 6;" src="img/bios-bkg-03.png" alt="">
+            <img id="cutout-mars"    style="z-index: 7;" src="img/cutout-mars.png" class="cutout" alt="">
+            <img class="bio-bkg"     style="z-index: 8;" src="img/bios-bkg-05.png" alt="">
+            <img class="bio-bkg"     style="z-index: 9;" src="img/bios-bkg-treelayer.png" alt="">
+            
+            <div id="sean-bio" class="bio-pos-1">
+               <p>"I'm the drummer! That means I am usually in the back, but this time I snuck into the front."</p>
+               <p>– Sean</p>
+            </div>
+            <div id="graydon-bio" class="bio-pos-1">
+               <p>(Guitar and lead vocals dude)</p>
+               <p>"Music is my passion. I just want to write songs that spread good vibes that people can connect with. Also, Mars is my dad."</p>
+               <p>– Graydon</p>
+            </div>
+            <div id="alec-bio" class="bio-pos-2">
+               <p>(Guitar and vocals guy)</p>
+               <p>"Sweet summer breezes, salty ocean waves, spicy memes, and Smash, with a little chill music on top. Tasty."</p>
+               <p>– Alec</p>
+            </div>
+            <div id="mars-bio" class="bio-pos-2">
+               <p>(Bass and lead dad)</p>
+               <p>"Love me some bass grooves and high notes along with a while lot of chilling with some buds."</p>
+               <p>– Mars</p>
+            </div>
+
+            <div class="cutout-hover-box" id="sean-hover-box"></div>
+            <div class="cutout-hover-box" id="graydon-hover-box"></div>
+            <div class="cutout-hover-box" id="alec-hover-box"></div>
+            <div class="cutout-hover-box" id="mars-hover-box"></div>
+         </div>
+
          <div id="nav-container">
             <img id="logo" src="img/surfer-yeti-logo-shadow.png" alt="surfer-yeti-logo">
             <div id="page-links">
@@ -32,15 +82,18 @@
          </div>
 
       </div>
-      <div class="shows-section">       
+      <div id="shows-section">       
+         <img class="bkg-divider" style="z-index: 10;" src="img/bkg-tree-divider.png" alt="">
 
-         <img src="img/showBub.png" alt="showtimeBubble" style="width:600px; height:250px; position:relative; left: 775px; top: 75px;">
+         <!--<img src="img/showBub.png" alt="showtimeBubble" style="width:600px; height:250px; position:relative; left: 775px; top: 75px;">-->
 
       </div>
-      <div class="photos-section">
+      <div id="photos-section">
+         <img class="bkg-divider" style="z-index: 10;" src="img/bkg-tree-divider.png" alt="">
 
       </div>
    </div>
+
 </body>
 
 </html>

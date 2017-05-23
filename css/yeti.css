@@ -15,7 +15,7 @@ body {
 #parallax {
    /*height: 100%;*/
    /*overflow-x: visible;*/
-   width: 5350px;
+   width: 5100px;
    height: 768px;
    position: fixed;
    top: 0;
@@ -29,28 +29,142 @@ body {
    width: 500px;
 }*/
 
-.bios-section {
-   background-image: url("../img/bios-bkg.jpg");
-   background-size: cover;
-   background-repeat: no-repeat;
+#bios-section {
+   /*background-image: url("../img/bios-bkg.jpg");*/
+   /*background-size: cover;
+   background-repeat: no-repeat;*/
    position: relative;
    float: left;
    height: 100%;
-   width: 1950px;
+   overflow: hidden;
+   /*width: 1950px;*/
+   width: 1500px;
 }
 
-.shows-section {
+#bkg-container {
+   height: 100%;
+   width: 5100px;
+}
+
+.bio-bkg {
+   /*height: inherit;*/
+   width: 1500px;
+   overflow: hidden;
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+
+.cutout {
+   width: 1500px;
+   overflow: hidden;
+   position: absolute;
+   left: 0;
+   top: 0;
+   transition: transform 0.2s ease-in-out;
+}
+
+.cutout-hover-box {
+   display: inline-block;
+   position: relative;
+   /*====DEBUGGING====*/
+   /*border: 2px solid white;*/
+   /*====DEBUGGING====*/
+   z-index: 11;
+}
+
+#sean-hover-box {
+   left: 0;
+   top: 0;
+   margin-left: 80px;
+   width: 190px;
+   height: 500px;
+}
+
+.bio-pos-1 {
+   opacity: 0;
+   visibility: hidden;
+   font-family: HoboStd;
+   color: #dabc5b;
+   text-shadow: 4px 4px 4px black;
+   position: absolute;
+   z-index: 11;
+   left: 160px;
+   top: 270px;
+   width: 230px;
+}
+
+.bio-pos-1 p {
+   margin-top: 5px;
+   margin-bottom: 5px;
+   font-size: 20px;
+}
+
+.bio-pos-2 {
+   opacity: 0;
+   visibility: hidden;
+   font-family: HoboStd;
+   color: #dabc5b;
+   text-shadow: 4px 4px 4px black;
+   position: absolute;
+   z-index: 11;
+   left: 710px;
+   top: 270px;
+   width: 210px;
+}
+
+.bio-pos-2 p {
+   margin-top: 5px;
+   margin-bottom: 5px;
+   font-size: 20px;
+}
+
+#graydon-hover-box {
+   left: 0;
+   top: 0;
+   width: 160px;
+   height: 500px;
+}
+
+#alec-hover-box {
+   left: 0;
+   top: 0;
+   margin-left: 200px;
+   width: 155px;
+   height: 500px;
+}
+
+#mars-hover-box {
+   left: 0;
+   top: 0;
+   width: 170px;
+   height: 500px;
+}
+
+.bkg-divider {
+   position: relative;
+   height: 100%;
+   left: -150px;
+}
+
+.fb_iframe_widget {
+   display: block !important;
+   position: relative !important;
+}
+
+#shows-section {
    background-image: url("../img/shows-bkg.jpg");
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
    position: relative;
+   /*overflow-y: hidden;*/
    float: left;
    height: 100%;
-   width: 1400px;
+   width: 1600px;
 }
 
-.photos-section {
+#photos-section {
    background-image: url("../img/fan-art-bkg.jpg");
    background-size: cover;
    background-repeat: no-repeat;
@@ -64,7 +178,7 @@ body {
    position: fixed;
    left: 75px;
    bottom: 50px;
-   z-index: 1;
+   z-index: 12;
 }
 
 #page-links {
@@ -102,7 +216,7 @@ body {
    position: fixed;
    right: 75px;
    bottom: 95px;
-   z-index: 1;
+   z-index: 12;
 }
 
 #social-container i {
