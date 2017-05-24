@@ -1,0 +1,27 @@
+{
+  "name": "surferyeti",
+  "version": "1.0.0",
+  "description": "A website repo for Bellingham, WA-based band \"Surfer Yeti\"",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "bower install",
+    "start": "autoreload-server -w \"**/**.{html,css,js}\" . 8008"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myklhenn/surferyeti.git"
+  },
+  "author": "Michael Henning, Sander Scherman Garzon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/myklhenn/surferyeti/issues"
+  },
+  "homepage": "https://github.com/myklhenn/surferyeti#readme",
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "jquery.scrollto": "^2.1.2"
+  },
+  "devDependencies": {
+    "simple-autoreload-server": "^0.2.6"
+  }
+}
