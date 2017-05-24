@@ -135,4 +135,55 @@ $(function ($) {
       }
    );
 
+   $('#social-hover-box').hover(
+      function () { /* hover enter */
+         /* extend height of hover trigger box */
+         $('#social-hover-box').css("height", "240px");
+         /* hide menu (three dots) button */
+         $('#social-menu-btn').fadeTo(200, 0, function () {
+            $('#social-menu-btn').css("visibility", "hidden");
+         });
+         /* fade in and animate buttons */
+         $('.social-btn').css("visibility", "visible");
+         $('.social-btn').fadeTo(200, 1);
+         $('#bandcamp-btn').css("transform",         "translate3d(0px, -60px, 0px)");
+         $('#bandcamp-btn').css("-ms-transform",     "translate3d(0px, -60px, 0px)");
+         $('#bandcamp-btn').css("-moz-transform",    "translate3d(0px, -60px, 0px)");
+         $('#bandcamp-btn').css("-webkit-transform", "translate3d(0px, -60px, 0px)");
+         $('#soundcloud-btn').css("transform",         "translate3d(0px, -120px, 0px)");
+         $('#soundcloud-btn').css("-ms-transform",     "translate3d(0px, -120px, 0px)");
+         $('#soundcloud-btn').css("-moz-transform",    "translate3d(0px, -120px, 0px)");
+         $('#soundcloud-btn').css("-webkit-transform", "translate3d(0px, -120px, 0px)");
+         $('#snapchat-btn').css("transform",         "translate3d(0px, -180px, 0px)");
+         $('#snapchat-btn').css("-ms-transform",     "translate3d(0px, -180px, 0px)");
+         $('#snapchat-btn').css("-moz-transform",    "translate3d(0px, -180px, 0px)");
+         $('#snapchat-btn').css("-webkit-transform", "translate3d(0px, -180px, 0px)");
+      },
+      function () { /* hover leave */
+         /* restore original height of hover trigger box */
+         $('#social-hover-box').css("height", "48px");
+         /* hide menu (three dots) button */
+         $('#social-menu-btn').css("visibility", "visible");
+         $('#social-menu-btn').fadeTo(200, 1);
+         /* fade out and animate buttons */
+         $('.social-btn').fadeTo(200, 0, function () {
+            $('.social-btn').css("visibility", "hidden");
+         });         
+         $('#bandcamp-btn').css("transform",         "translate3d(0px, 0px, 0px)");
+         $('#bandcamp-btn').css("-ms-transform",     "translate3d(0px, 0px, 0px)");
+         $('#bandcamp-btn').css("-moz-transform",    "translate3d(0px, 0px, 0px)");
+         $('#bandcamp-btn').css("-webkit-transform", "translate3d(0px, 0px, 0px)");
+         
+         $('#soundcloud-btn').css("transform",         "translate3d(0px, 0px, 0px)");
+         $('#soundcloud-btn').css("-ms-transform",     "translate3d(0px, 0px, 0px)");
+         $('#soundcloud-btn').css("-moz-transform",    "translate3d(0px, 0px, 0px)");
+         $('#soundcloud-btn').css("-webkit-transform", "translate3d(0px, 0px, 0px)");
+         
+         $('#snapchat-btn').css("transform",         "translate3d(0px, 0px, 0px)");
+         $('#snapchat-btn').css("-ms-transform",     "translate3d(0px, 0px, 0px)");
+         $('#snapchat-btn').css("-moz-transform",    "translate3d(0px, 0px, 0px)");
+         $('#snapchat-btn').css("-webkit-transform", "translate3d(0px, 0px, 0px)");
+      }
+   );
+   
 });

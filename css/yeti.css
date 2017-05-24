@@ -177,7 +177,7 @@ body {
 #nav-container {
    position: fixed;
    left: 75px;
-   bottom: 50px;
+   bottom: 25px;
    z-index: 12;
 }
 
@@ -215,7 +215,7 @@ body {
 #social-container {
    position: fixed;
    right: 75px;
-   bottom: 95px;
+   bottom: 65px;
    z-index: 12;
 }
 
@@ -223,6 +223,35 @@ body {
    color: #dabc5b;
    text-shadow: 4px 4px 4px black;
    margin-right: 25px;
+}
+
+#social-hover-box {
+   width: 62px;
+   height: 48px;
+}
+
+#social-hover-box i {
+   bottom: 0;
+   position: absolute;
+   text-align: center;
+   margin-right: 0px;
+   width: 62px;
+   height: 48px;
+}
+
+.social-btn {
+   transition: transform 0.2s ease-in-out;
+   bottom: 0;
+   opacity: 0;
+   visibility: hidden;
+   position: absolute;
+}
+
+.social-btn i {
+   text-align: center;
+   margin-right: 0px;
+   width: 62px;
+   height: 48px;
 }
 
 #social-container i:hover {
