@@ -1,0 +1,23 @@
+{
+  "name": "surferyeti",
+  "description": "A website repo for Bellingham, WA-based band \"Surfer Yeti\"",
+  "main": "index.js",
+  "authors": [
+    "Michael Henning",
+    "Sander Scherman Garzon"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/myklhenn/surferyeti",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "social-feed": "^0.1.2",
+    "jQuery": "^3.2.1"
+  }
+}

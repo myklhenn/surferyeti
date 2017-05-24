@@ -3,24 +3,21 @@
 
 <head>
    <title>Surfer Yeti</title>
-   <link rel="stylesheet" href="css/yeti.css">
-   <link rel="stylesheet" href="css/font-awesome.min.css">
-   <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="css/yeti.css">
+   <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
+   <link rel="stylesheet" type="text/css" href="bower_components/social-feed/css/jquery.socialfeed.css">
+   <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+   <script type="text/javascript" src="node_modules/jquery.scrollto/jquery.scrollTo.min.js"></script>
+   <script type="text/javascript" src="bower_components/codebird-js/codebird.js"></script>
+   <script type="text/javascript" src="bower_components/doT/doT.min.js"></script>
+   <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+   <script type="text/javascript" src="bower_components/moment/locale/it.js"></script>
+   <script type="text/javascript" src="bower_components/social-feed/js/jquery.socialfeed.js"></script>
    <script type="text/javascript" src="js/jquery.jInvertScroll.min.js"></script>
-   <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
    <script type="text/javascript" src="js/yeti.js"></script>
 </head>
 
 <body>
-   <div id="fb-root"></div>
-   <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
-      fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));</script>
-
    <div id="parallax">
       <div id="bios-section">
 
@@ -55,7 +52,7 @@
             </div>
             <div id="mars-bio" class="bio-pos-2">
                <p>(Bass and lead dad)</p>
-               <p>"Love me some bass grooves and high notes along with a while lot of chilling with some buds."</p>
+               <p>"Love me some bass grooves and high notes along with a whole lot of chilling with some buds."</p>
                <p>– Mars</p>
             </div>
 
@@ -85,6 +82,10 @@
       <div id="shows-section">       
          <img class="bkg-divider" style="z-index: 10;" src="img/bkg-tree-divider.png" alt="">
 
+         <div id="social-feed-scroll-container">
+            <div class="social-feed-container"></div>
+         </div>
+         
          <!--<img src="img/showBub.png" alt="showtimeBubble" style="width:600px; height:250px; position:relative; left: 775px; top: 75px;">-->
 
       </div>

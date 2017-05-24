@@ -250,3 +250,16 @@ body {
    float: left;
    width: 400px;
 }
+
+.social-feed-container {
+   
+}
+
+#social-feed-scroll-container {
+   position: absolute;
+   width: 50%;
+   top: 50px;
+   left: 150px;
+   overflow-y: scroll;
+   height: 500px;
+}

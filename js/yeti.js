@@ -1,10 +1,36 @@
 $(function ($) {
+
+   // window.fbAsyncInit = function() {
+   //    FB.init({
+   //       appId            : 'your-app-id',
+   //       autoLogAppEvents : true,
+   //       xfbml            : true,
+   //       version          : 'v2.9'
+   //    });
+   //    FB.AppEvents.logPageView();
+   // };
+
+   // (function(d, s, id){
+   //    var js, fjs = d.getElementsByTagName(s)[0];
+   //    if (d.getElementById(id)) {return;}
+   //    js = d.createElement(s); js.id = id;
+   //    js.src = "//connect.facebook.net/en_US/sdk.js";
+   //    fjs.parentNode.insertBefore(js, fjs);
+   // }(document, 'script', 'facebook-jssdk'));
+
    $.jInvertScroll(['#parallax', '#bkg-container'], {    // an array containing the selector(s) for the elements you want to animate
       onScroll: function (percent) {   // optional: callback function that will be called when the user scrolls down, 
                                        // useful for animating other things on the page
          // console.log(percent);
       }
    });
+
+   // var accessToken;   
+   // FB.getLoginStatus(function(response) {
+   //    if (response.status === 'connected') {
+   //       accessToken = response.authResponse.accessToken;
+   //    } 
+   // });
 
    $('#page-links a').on('click', function (e) {
       e.preventDefault();
@@ -24,6 +50,20 @@ $(function ($) {
       $('#parallax').css("height", $(window).height() + "px");
       // $('#bios-section').css("width", $(window).width() + "px");
       // $('.bio-bkg').css("width",$(window).width()+"px");
+
+      $('.social-feed-container').socialfeed({
+         facebook:{
+            accounts: ['@surferyeti','!surferyeti'],
+            limit: 10, // max number of posts to load
+            access_token: "1936729116556277|bdf3f97141b8c115898421ada990e68b"
+         },
+         length: 400, // for posts with text longer than this length, show an ellipsis
+         update_period: 5000,
+         template: "fb-post-template.html",
+         date_format: "ll",
+         date_locale: "en",
+      });
+
    });
 
    $(window).resize(function () {
