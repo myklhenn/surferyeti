@@ -1,9 +1,39 @@
 $(function ($) {
 
-   $.jInvertScroll(['#parallax', '#bkg-container'], {    // an array containing the selector(s) for the elements you want to animate
-      onScroll: function (percent) {   // optional: callback function that will be called when the user scrolls down, 
-                                       // useful for animating other things on the page
-         // console.log(percent);
+   $.jInvertScroll(['#parallax', '#bkg-container'], { // array of elements to animate
+      onScroll: function (percent) { // function that is called when the user scrolls
+         
+         var total     = $('#parallax').width();
+         var winWidth  = $(window).width();         
+         var showsPerc = $('#shows-section').position().left / (total - winWidth);
+         var artPerc   = $('#photos-section').position().left / (total - winWidth);
+
+         $('#bios-btn').css("color", "#dabc5b");
+         $('#shows-btn').css("color", "#dabc5b");
+         $('#photos-btn').css("color", "#dabc5b");
+
+         if (percent >= artPerc-0.05) {
+            // highlight 'art' button
+            $('#photos-btn').css("color", "#b75a01");
+            // un-highlight other buttons
+            // $('#bios-btn').css("color", "#dabc5b");
+            // $('#shows-btn').css("color", "#dabc5b");
+         }
+         else if (percent >= showsPerc-0.05) {
+            // highlight 'shows' button
+            $('#shows-btn').css("color", "#b75a01");
+            // un-highlight other buttons
+            // $('#bios-btn').css("color", "#dabc5b");
+            // $('#photos-btn').css("color", "#dabc5b");
+         }
+         else { 
+            // highlight 'home' button
+            $('#bios-btn').css("color", "#b75a01");
+            // un-highlight other buttons
+            // $('#shows-btn').css("color", "#dabc5b");
+            // $('#photos-btn').css("color", "#dabc5b");
+         }
+
       }
    });
 
@@ -11,21 +41,24 @@ $(function ($) {
       e.preventDefault();
 
       var target = '#'+$(this).data('target');
-      var left = $(target).position().left;
-      var total = $('#parallax').width();
-      var perc = left / (total - $(window).width()) * 100;
+      var left   = $(target).position().left;
+      var total  = $('#parallax').width();
+      var perc   = left / (total - $(window).width()) * 100;
       
       var height = $('html').height();
-      var final = ((height - $(window).height())/ 100 * perc);
+      var final  = ((height - $(window).height()) / 100 * perc);
       
       $('html, body').animate({scrollTop: final}, 1000);
    });
 
    $(document).ready(function () {
+      /* set height of scrolling section to window height */
       $('#parallax').css("height", $(window).height() + "px");
-      // $('#bios-section').css("width", $(window).width() + "px");
-      // $('.bio-bkg').css("width",$(window).width()+"px");
 
+      /* highlight the first ('home') nav button */
+      $('#bios-btn').css("color", "#b75a01");
+
+      /* social-feed setup */
       $('.social-feed-container').socialfeed({
          facebook:{
             accounts: ['@surferyeti','!surferyeti'],
