@@ -3,5 +3,5 @@
 ._.DS_Store
 ._*
 
-node_modules
-bower_components
+# node_modules
+# bower_components
