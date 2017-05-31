@@ -1,7 +1,3 @@
-/*html, body {
-   width: 100%;
-   height: 100%;
-}*/
 
 @font-face {
    font-family: HoboStd;
@@ -15,42 +11,149 @@ body {
 #parallax {
    /*height: 100%;*/
    /*overflow-x: visible;*/
-   width: 5350px;
+   width: 5100px;
    height: 768px;
    position: fixed;
    top: 0;
    left: 0;
 }
 
-/*.post {
-   margin-left: 15px;
-   position: relative;
-   float: left;
-   width: 500px;
-}*/
-
-.bios-section {
-   background-image: url("../img/bios-bkg.jpg");
-   background-size: cover;
-   background-repeat: no-repeat;
+#bios-section {
+   /*background-image: url("../img/bios-bkg.jpg");*/
+   /*background-size: cover;
+   background-repeat: no-repeat;*/
    position: relative;
    float: left;
    height: 100%;
-   width: 1950px;
+   overflow: hidden;
+   /*width: 1950px;*/
+   width: 1500px;
 }
 
-.shows-section {
+#bkg-container {
+   height: 100%;
+   width: 5100px;
+}
+
+.bio-bkg {
+   /*height: inherit;*/
+   width: 1500px;
+   overflow: hidden;
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+
+.cutout {
+   width: 1500px;
+   overflow: hidden;
+   position: absolute;
+   left: 0;
+   top: 0;
+   transition: transform 0.2s ease-in-out;
+}
+
+.cutout-hover-box {
+   display: inline-block;
+   position: relative;
+   /*====DEBUGGING====*/
+   /*border: 2px solid white;*/
+   /*====DEBUGGING====*/
+   z-index: 11;
+}
+
+#sean-hover-box {
+   left: 0;
+   top: 0;
+   margin-left: 80px;
+   width: 190px;
+   height: 500px;
+}
+
+.bio-pos-1 {
+   opacity: 0;
+   visibility: hidden;
+   font-family: HoboStd;
+   color: #dabc5b;
+   text-shadow: 4px 4px 4px black;
+   position: absolute;
+   z-index: 11;
+   left: 160px;
+   top: 270px;
+   width: 230px;
+}
+
+.bio-pos-1 p {
+   margin-top: 5px;
+   margin-bottom: 5px;
+   font-size: 20px;
+}
+
+.bio-pos-2 {
+   opacity: 0;
+   visibility: hidden;
+   font-family: HoboStd;
+   color: #dabc5b;
+   text-shadow: 4px 4px 4px black;
+   position: absolute;
+   z-index: 11;
+   left: 710px;
+   top: 270px;
+   width: 210px;
+}
+
+.bio-pos-2 p {
+   margin-top: 5px;
+   margin-bottom: 5px;
+   font-size: 20px;
+}
+
+#graydon-hover-box {
+   left: 0;
+   top: 0;
+   width: 160px;
+   height: 500px;
+}
+
+#alec-hover-box {
+   left: 0;
+   top: 0;
+   margin-left: 200px;
+   width: 155px;
+   height: 500px;
+}
+
+#mars-hover-box {
+   left: 0;
+   top: 0;
+   width: 170px;
+   height: 500px;
+}
+
+.bkg-divider {
+   position: relative;
+   height: 100%;
+   left: -150px;
+}
+
+.fb_iframe_widget {
+   display: block !important;
+   position: relative !important;
+}
+
+#shows-section {
    background-image: url("../img/shows-bkg.jpg");
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
    position: relative;
+   /*overflow-y: hidden;*/
    float: left;
    height: 100%;
-   width: 1400px;
+   width: 1600px;
 }
 
-.photos-section {
+#photos-section {
    background-image: url("../img/fan-art-bkg.jpg");
    background-size: cover;
    background-repeat: no-repeat;
@@ -63,14 +166,13 @@ body {
 #nav-container {
    position: fixed;
    left: 75px;
-   bottom: 50px;
-   z-index: 1;
+   bottom: 25px;
+   z-index: 12;
 }
 
 #page-links {
    font-family: HoboStd;
    /*color: #b75a01;*/
-   
    text-shadow: 4px 4px 4px black;
    font-size: 2.3em;
    position: relative;
@@ -79,6 +181,14 @@ body {
    padding-top: 10px;
    padding-bottom: 5px;
    margin-left: 115px;
+}
+
+#page-links p {
+   -o-transition: 0.2s;
+   -ms-transition: 0.2s;
+   -moz-transition: 0.2s;
+   -webkit-transition: 0.2s;
+   transition: 0.2s;
 }
 
 #page-links a:hover {
@@ -101,14 +211,43 @@ body {
 #social-container {
    position: fixed;
    right: 75px;
-   bottom: 95px;
-   z-index: 1;
+   bottom: 65px;
+   z-index: 12;
 }
 
 #social-container i {
    color: #dabc5b;
    text-shadow: 4px 4px 4px black;
    margin-right: 25px;
+}
+
+#social-hover-box {
+   width: 62px;
+   height: 48px;
+}
+
+#social-hover-box i {
+   bottom: 0;
+   position: absolute;
+   text-align: center;
+   margin-right: 0px;
+   width: 62px;
+   height: 48px;
+}
+
+.social-btn {
+   transition: transform 0.2s ease-in-out;
+   bottom: 0;
+   opacity: 0;
+   visibility: hidden;
+   position: absolute;
+}
+
+.social-btn i {
+   text-align: center;
+   margin-right: 0px;
+   width: 62px;
+   height: 48px;
 }
 
 #social-container i:hover {
@@ -135,4 +274,17 @@ body {
    position: relative;
    float: left;
    width: 400px;
+}
+
+.social-feed-container {
+   
+}
+
+#social-feed-scroll-container {
+   position: absolute;
+   width: 50%;
+   top: 50px;
+   left: 150px;
+   overflow-y: scroll;
+   height: 500px;
 }

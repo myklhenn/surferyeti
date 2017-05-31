@@ -3,44 +3,103 @@
 
 <head>
    <title>Surfer Yeti</title>
-   <link rel="stylesheet" href="css/yeti.css">
-   <link rel="stylesheet" href="css/font-awesome.min.css">
-   <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="css/yeti.css">
+   <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
+   <link rel="stylesheet" type="text/css" href="bower_components/social-feed/css/jquery.socialfeed.css">
+   <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+   <script type="text/javascript" src="node_modules/jquery.scrollto/jquery.scrollTo.min.js"></script>
+   <script type="text/javascript" src="bower_components/codebird-js/codebird.js"></script>
+   <script type="text/javascript" src="bower_components/doT/doT.min.js"></script>
+   <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+   <script type="text/javascript" src="bower_components/moment/locale/it.js"></script>
+   <script type="text/javascript" src="bower_components/social-feed/js/jquery.socialfeed.js"></script>
    <script type="text/javascript" src="js/jquery.jInvertScroll.min.js"></script>
-   <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
    <script type="text/javascript" src="js/yeti.js"></script>
 </head>
 
 <body>
    <div id="parallax">
-      <div class="bios-section">
-         
+      <div id="bios-section">
+
+         <div id="bkg-container">
+            <img class="bio-bkg"     style="z-index: 0;" src="img/bios-bkg-02.png" alt="">
+
+            <img id="cutout-sean"    style="z-index: 1;" src="img/cutout-sean.png" class="cutout" alt="">
+            
+            
+            <img class="bio-bkg"     style="z-index: 2;" src="img/bios-bkg-01.png" alt="">
+            <img id="cutout-graydon" style="z-index: 3;" src="img/cutout-graydon.png" class="cutout" alt="">
+            <img class="bio-bkg"     style="z-index: 4;" src="img/bios-bkg-04.png" alt="">
+            <img id="cutout-alec"    style="z-index: 5;" src="img/cutout-alec.png" class="cutout" alt="">
+            <img class="bio-bkg"     style="z-index: 6;" src="img/bios-bkg-03.png" alt="">
+            <img id="cutout-mars"    style="z-index: 7;" src="img/cutout-mars.png" class="cutout" alt="">
+            <img class="bio-bkg"     style="z-index: 8;" src="img/bios-bkg-05.png" alt="">
+            <img class="bio-bkg"     style="z-index: 9;" src="img/bios-bkg-treelayer.png" alt="">
+            
+            <div id="sean-bio" class="bio-pos-1">
+               <p>"I'm the drummer! That means I am usually in the back, but this time I snuck into the front."</p>
+               <p>- Sean</p>
+            </div>
+            <div id="graydon-bio" class="bio-pos-1">
+               <p>(Guitar and lead vocals dude)</p>
+               <p>"Music is my passion. I just want to write songs that spread good vibes that people can connect with. Also, Mars is my dad."</p>
+               <p>- Graydon</p>
+            </div>
+            <div id="alec-bio" class="bio-pos-2">
+               <p>(Guitar and vocals guy)</p>
+               <p>"Sweet summer breezes, salty ocean waves, spicy memes, and Smash, with a little chill music on top. Tasty."</p>
+               <p>- Alec</p>
+            </div>
+            <div id="mars-bio" class="bio-pos-2">
+               <p>(Bass and lead dad)</p>
+               <p>"I love me some bass grooves and high notes along with a whole lot of chilling with some buds."</p>
+               <p>- Mars</p>
+            </div>
+
+            <div class="cutout-hover-box" id="sean-hover-box"></div>
+            <div class="cutout-hover-box" id="graydon-hover-box"></div>
+            <div class="cutout-hover-box" id="alec-hover-box"></div>
+            <div class="cutout-hover-box" id="mars-hover-box"></div>
+         </div>
+
          <div id="nav-container">
             <img id="logo" src="img/surfer-yeti-logo-shadow.png" alt="surfer-yeti-logo">
             <div id="page-links">
-               <a href="#" data-target="bios-section"><p>HOME</p></a>
-               <a href="#" data-target="shows-section"><p>SHOWS</p></a>
-               <a href="#" data-target="photos-section"><p>ART</p></a>
+               <a href="#" data-target="bios-section" id="bios-btn" ><p>HOME</p></a>
+               <a href="#" data-target="shows-section" id="shows-btn"><p>SHOWS</p></a>
+               <a href="#" data-target="photos-section" id="photos-btn"><p>ART</p></a>
             </div>
          </div>
 
          <div id="social-container">
-            <a id="facebook-btn" href=""><i class="fa fa-facebook-square fa-3x"></i></a>
-            <a id="bandcamp-btn" href=""><i class="fa fa-bandcamp fa-3x"></i></a>
-            <a id="snapchat-btn" href=""><i class="fa fa-snapchat fa-3x"></i></a>
-            <a id="soundcloud-btn" href=""><i class="fa fa-soundcloud fa-3x"></i></a>
+            
+            <div id="social-hover-box">
+               <i id="social-menu-btn" class="fa fa-ellipsis-v fa-3x"></i>
+               <a class="social-btn" id="facebook-btn" href=""><i class="fa fa-facebook-square fa-3x"></i></a>
+               <a class="social-btn" id="bandcamp-btn" href=""><i class="fa fa-bandcamp fa-3x"></i></a>
+               <a class="social-btn" id="snapchat-btn" href=""><i class="fa fa-snapchat fa-3x"></i></a>
+               <a class="social-btn" id="soundcloud-btn" href=""><i class="fa fa-soundcloud fa-3x"></i></a>
+            </div>
+            
          </div>
 
       </div>
-      <div class="shows-section">       
+      <div id="shows-section">       
+         <img class="bkg-divider" style="z-index: 10;" src="img/bkg-tree-divider.png" alt="">
 
-         <img src="img/showBub.png" alt="showtimeBubble" style="width:600px; height:250px; position:relative; left: 775px; top: 75px;">
+         <div id="social-feed-scroll-container">
+            <div class="social-feed-container"></div>
+         </div>
+         
+         <!--<img src="img/showBub.png" alt="showtimeBubble" style="width:600px; height:250px; position:relative; left: 775px; top: 75px;">-->
 
       </div>
-      <div class="photos-section">
+      <div id="photos-section">
+         <img class="bkg-divider" style="z-index: 10;" src="img/bkg-tree-divider.png" alt="">
 
       </div>
    </div>
+
 </body>
 
 </html>
