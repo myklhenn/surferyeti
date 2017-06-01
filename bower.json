@@ -17,7 +17,6 @@
     "tests"
   ],
   "dependencies": {
-    "social-feed": "^0.1.2",
-    "jQuery": "^3.2.1"
+    "social-feed": "^0.1.2"
   }
 }

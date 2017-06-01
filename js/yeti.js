@@ -52,6 +52,8 @@ $(function ($) {
    });
 
    $(document).ready(function () {
+
+      moment.locale('en');
       /* set height of scrolling section to window height */
       $('#parallax').css("height", $(window).height() + "px");
 
