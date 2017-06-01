@@ -52,11 +52,12 @@ $(function ($) {
    });
 
    $(document).ready(function () {
-
+      /* set locale of dates used in social-feed */
       moment.locale('en');
+      
       /* set height of scrolling section to window height */
       $('#parallax').css("height", $(window).height() + "px");
-
+      
       /* highlight the first ('home') nav button */
       $('#bios-btn').css("color", "#b75a01");
 
@@ -73,7 +74,6 @@ $(function ($) {
          date_format: "ll",
          date_locale: "en",
       });
-
    });
 
    $(window).resize(function () {
